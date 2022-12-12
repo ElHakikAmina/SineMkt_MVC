@@ -59,7 +59,7 @@
 				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 				                    <i class="fa fa-bars"></i>
 				                </button>
-				                <a class="navbar-brandx" href="index.php" style="padding-top: 10px; padding-bottom:10px;"><img src="logoFinal.png" style="width:130px;" alt=""></a>
+				                <a class="navbar-brandx" href="index.php" style="padding-top: 10px; padding-bottom:10px;"><img src="views/logoFinal.png" style="width:130px;" alt=""></a>
 
 				            </div><!--/.navbar-header-->
 				            <!-- End Header Navigation -->
@@ -67,7 +67,7 @@
 				            <!-- Collect the nav links, forms, and other content for toggling -->
 				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 				                <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
-				                    <li class=" scrollk "><a href="index">home</a></li>
+									<li class=" scrollk "><a href="index">home</a></li>
 				                    <li class="scrollk"><a href="newarrival">new arrival</a></li>
 				                    <li class="scrollk"><a href="featured">features</a></li>
 				                    <li class="scrollk"><a href="blog">blog</a></li>
