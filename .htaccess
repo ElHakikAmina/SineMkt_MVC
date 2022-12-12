@@ -1,3 +1,3 @@
 RewriteEngine On
-RewriteBase /SineMkt_MVC/
+RewriteBase /SineMkt_MVCnew/
 RewriteRule ^([-a-zA-Z0-9]+)$ index.php?page=$1

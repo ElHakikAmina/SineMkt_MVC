@@ -139,7 +139,10 @@ $products = $data->getAllProduct();
 								
 								<h4><a href="#"><?php echo $product['Nom'];?></a></h4>
 								<p class="arrival-product-price"><?php echo $product['Prix'];?>$</p>
-								
+								<?php
+									if(isset($_SESSION['logged']) && $_SESSION['logged']==true)
+									{
+										?>
 								<form method="post"  action="delete">
                                 <input type="hidden" name="id" value="<?php echo $product['Id'];?>"/>
                                 <button class="btn btn-danger">Delete</button>
@@ -148,7 +151,7 @@ $products = $data->getAllProduct();
                                 <input type="hidden" name="id" value="<?php echo $product['Id'];?>"/>
                                 <button class="btn btn-warning">Update</button>
                             	</form> 
-								
+									<?php } ?>
 							</div>
 						</div>
 						<?php endforeach;?>

@@ -1,29 +1,8 @@
 <?php
-require ('./autoload.php');
-session_start();
-if(isset($_SESSION["Email"]) && !empty($_SESSION["Email"]))
+if(isset($_POST['btn-login']))
 {
-    header("location:index.php");
-}
-if(isset($_POST["btn-logink"]))
-{
-    if(isset($_POST["email_login"]) && isset($_POST["password_login"]) && !empty($_POST["email_login"]) && !empty($_POST["password_login"]))
-    {
-        $email=htmlspecialchars($_POST["email_login"]);
-        $password=htmlspecialchars($_POST["password_login"]);
-        $req="select * from admin where Email=? and Password=?";
-        $req=$db->prepare($req);
-        $req->execute([$email,$password]);
-        if($req->rowCount()==1)
-        {
-            $_SESSION["Email"]=$email;
-            header("location:index.php");
-        }else if($req->rowCount()==0){
-            $erreur="Information Incorrect";
-        }
-    }else{
-        $erreur="You must fill  all the inputs";
-    }
+	$loginUser= new UsersController();
+	$loginUser->auth();
 }
 ?>
 <!doctype html>
@@ -131,10 +110,10 @@ if(isset($_POST["btn-logink"]))
 		<!--welcome-hero end -->
         
         <div class="contact-form">
-            <form action="login" method="post">
+            <form  method="POST">
 			<h1>Log in</h1> <br>
-            <input type="text" name="" class="contact_input_NameEmail" placeholder="Enter your Eamil ..." style="align:center;"> <br><br><br>
-            <input type="password" name="" class="contact_input_NameEmail" placeholder="Enter your  Password ..."><br><br><br>
+            <input type="text" name="username" class="contact_input_NameEmail" placeholder="Enter your Eamil ..." style="align:center;"> <br><br><br>
+            <input type="password" name="password" class="contact_input_NameEmail" placeholder="Enter your  Password ..."><br><br><br>
             <!-- <textarea name="" class="contact_input_textarea" placeholder="Enter your message ..." id="" cols="30" rows="10"></textarea>
 			<a href=""><img src="assets/images/contact/4png.png" alt="" style=" position:absolute; bottom:1%; right:20%;"></a> -->
 			<div class="hm-foot-email">

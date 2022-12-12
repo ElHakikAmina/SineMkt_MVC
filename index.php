@@ -1,4 +1,5 @@
 <?php
+session_start();
 require './autoload.php';
 $page='';
 if(isset($_GET['page']))
@@ -29,6 +30,9 @@ if($page == 'add')
 }elseif($page == 'update')
 {
     require 'views/update.php';
+}elseif($page == 'logout')
+{
+    require 'controllers/logout.php';
 }
 else{
     require 'views/index.php';

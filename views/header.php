@@ -72,7 +72,21 @@
 				                    <li class="scrollk"><a href="featured">features</a></li>
 				                    <li class="scrollk"><a href="blog">blog</a></li>
 				                    <li class="scrollk"><a href="contact">contact</a></li>
-									<li class="scrollk"><a href="login">Login</a></li>
+									
+									<?php
+									if(isset($_SESSION['logged']) && $_SESSION['logged']==true)
+									{
+										?>
+											<li class="scrollk"><a href="add">ajouter un produit</a></li>
+											<li class="scrollk"><a href="logout">Logout</a></li>
+											<?php
+									}else
+									{
+										?>
+										<li class="scrollk"><a href="login">Login</a></li>
+										<?php
+									}
+									?>
 				                </ul><!--/.nav -->
 				            </div><!-- /.navbar-collapse -->
 				        </div><!--/.container-->
