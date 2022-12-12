@@ -6,7 +6,7 @@ if(isset($_GET['page']))
 {
     $page=$_GET['page'];
 }
-if($page == 'add')
+if($page == 'add' && isset($_SESSION['logged']) && $_SESSION['logged']==true )
 {
  require 'views/addProduct.php';
 }elseif($page == 'blog')
@@ -18,16 +18,16 @@ if($page == 'add')
 }elseif($page == 'featured')
 {
     require 'views/featuredProducts.php';
-}elseif($page == 'login')
+}elseif($page == 'login'  && !isset($_SESSION['logged']) )
 {
     require 'views/login.php';
 }elseif($page == 'newarrival')
 {
     require 'views/newArrival.php';
-}elseif($page == 'delete')
+}elseif($page == 'delete' && isset($_SESSION['logged']) && $_SESSION['logged']==true)
 {
     require 'models/delete.php';
-}elseif($page == 'update')
+}elseif($page == 'update' && isset($_SESSION['logged']) && $_SESSION['logged']==true)
 {
     require 'views/update.php';
 }elseif($page == 'logout')

@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -226,7 +229,7 @@
 				        </div>
 				        <!-- End Top Search -->
 
-				      <?php include('header.php'); ?>
+						<?php include('header.php'); ?>
 				    </nav><!--/nav-->
 				    <!-- End Navigation -->
 				</div><!--/.header-area-->
