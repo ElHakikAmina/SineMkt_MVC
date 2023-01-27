@@ -1,4 +1,5 @@
 # SineMkt_MVC
+![sinmkt](https://user-images.githubusercontent.com/112892620/215045836-c4a955f1-08ce-4494-94f5-e162ea5f4c6b.png)
 
 Home Page
 
