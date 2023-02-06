@@ -2,7 +2,7 @@
 if(isset($_POST['add']))
 {
     $newProduct = new ProductController();
-    $newProduct->addProduct();
+     $newProduct->addProduct();
 }
 ?>
 <!doctype html>
